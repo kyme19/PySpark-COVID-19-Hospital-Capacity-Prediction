@@ -26,29 +26,30 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName("csv_extraction").getOrCreate()
 ```
-[### image three ](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20three.png)
+
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20three.png)
 
 ### Step Three: Reading the CSV file from the HDFS into a DataFrame
+
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20four.png)
 
 the option tell spark to treat the first row as header 
 
 ```python
 df = spark.read.option("header",True).csv("hdfs://localhost:9000/kencovid.csv")
 ```
-### image four  
-
 Now the DataFrame df contains the contents of the CSV file. You can perform analysis and transformations on it. For example, to print the schema:
 ```python
 df.printSchema()
 ```
-### image five 
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20five.png)
+
 
 to print the first few rows 
-
 ```python
 df.show(5)
 ```
-### image six
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20six.png)
 
 
 
@@ -58,28 +59,25 @@ df.show(5)
 # Phase 2: Pre-process the extracted data 
 ## The following are techniques we used to pre-process the extracted CSV data in the pyspark DataFrame
 
-##Step One
-### first we start by handling the missing values
+##Step One: first we start by handling the missing values
 
 ```python
 from pyspark.sql.functions import when, count, col
 df.select([count(when(col(c).isNull(), c)).alias(c) for c in df.columns]).show()
 df = df.fillna({'Regular Isolation Beds Available': 0}) 
 ```
-### image seven
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20seven.png)
 
-##Step two
-### Convert columns to appropriate data types
+##Step two: Convert columns to appropriate data types
 
 ```python
 from pyspark.sql.types import IntegerType, StringType
 df = df.withColumn("Regular Isolation Beds Available", df["Regular Isolation Beds Available"].cast(IntegerType()))
 df = df.withColumn("County", df["County"].cast(StringType())) 
 ```
-### image eight
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20eight.png)
 
-## Step three
-### filter outlier values / incorrect values 
+## Step three: filter outlier values / incorrect values 
 
 ```python
 from pyspark.sql.functions import col
@@ -98,7 +96,10 @@ To display the DataFrame and print the first few rows after applying the transfo
 df.printSchema() # print schema
 df.show(5) # print first 5 rows
 ```
-### image nine
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20nine.png)
+
+
+
 
 
 # phase 3: Applying predective analytics 
@@ -120,6 +121,7 @@ df = df.withColumn("Recommended ICU/Critical Care beds for Isolation",
                    df["Recommended ICU/Critical Care beds for Isolation"].cast(IntegerType()))
 
 ```
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20ten.png)
 
 ## Step two: Split Data
 
@@ -127,7 +129,7 @@ df = df.withColumn("Recommended ICU/Critical Care beds for Isolation",
 from pyspark.sql.functions import rand
 train_df, test_df = df.randomSplit([0.7, 0.3], seed=42)
 ```
-### image ten
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20eleven.png)
 
 ## Step three: Vector assemble features 
 Here were trying to train a linear regression model to predict confirmed cases:
@@ -141,7 +143,7 @@ train_vect = assembler.transform(train_df)
 test_vect = assembler.transform(test_df)
 ```
 
-### image eleven 
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20twelve.png)
 ## Step 4: Train model
 
 ```python
@@ -151,9 +153,9 @@ lr = LinearRegression(featuresCol="features", labelCol=label_col)
 fitted_model = lr.fit(train_vect)
 ```
 
-### image 12 
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20thirteen.png)
 A close up view on evaluated data 
-### image 13
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20fourteen.png)
 
 
 ## Step 5: Evaluate model
@@ -163,7 +165,7 @@ test_results = fitted_model.evaluate(test_vect)
 print(test_results.rootMeanSquaredError)
 print(test_results.r2)
 ```
-### image 14
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20fifteen.png)
 
 ## Step 6: Visualize the model
 
@@ -182,10 +184,9 @@ plt.plot([0, 50], [0, 50], c='red')
 plt.title("True vs Predicted")
 plt.show()
 ```
-image 15
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/Figure_1.png)
 
-
-### step 7: Test the model 
+## step 7: Test the model 
 ```python
 test_df = spark.createDataFrame([(500, 100, 50)], ["Regular Isolation Beds Available", "Total ICU Beds", "Ventilators Available"])
 model.transform(test_df).select("prediction").show()
