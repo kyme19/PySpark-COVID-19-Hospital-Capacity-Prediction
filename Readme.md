@@ -13,7 +13,7 @@ in your case it might be
 hdfs dfs -copyFromLocal /path/to/kencovid.csv /kencovid
 ```
 
-### image one 
+imgs/image one.png
 #### in hadoop
 ### image two
 
