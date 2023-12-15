@@ -1,0 +1,1 @@
+hdfs dfs -copyFromLocal C:/Users/user/Downloads/kencovid.csv /kencovid.csv

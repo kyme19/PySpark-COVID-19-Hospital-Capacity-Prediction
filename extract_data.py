@@ -1,0 +1,1 @@
+df = spark.read.option("header",True).csv("hdfs://localhost:9000/kencovid.csv")
