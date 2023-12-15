@@ -3,7 +3,8 @@ This repository contains PySpark code to extract COVID-19 hospital bed data from
 
 ## Ingest the data into Hadoop DFS Data lake 
 
-'''text
+'''bash
+
 hdfs dfs -copyFromLocal C:/Users/user/Downloads/kencovid.csv /kencovid.csv
 
 in your case it might be 
