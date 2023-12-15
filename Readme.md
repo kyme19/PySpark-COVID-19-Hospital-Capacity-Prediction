@@ -10,3 +10,4 @@ hdfs dfs -copyFromLocal C:/Users/user/Downloads/kencovid.csv /kencovid.csv
 in your case it might be 
 
 hdfs dfs -copyFromLocal /path/to/kencovid.csv /kencovid
+'''
