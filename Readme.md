@@ -13,7 +13,7 @@ in your case it might be
 hdfs dfs -copyFromLocal /path/to/kencovid.csv /kencovid
 ```
 
-imgs/image one.png
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20one.png)
 #### in hadoop
 ### image two
 
