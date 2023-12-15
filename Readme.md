@@ -15,7 +15,7 @@ hdfs dfs -copyFromLocal /path/to/kencovid.csv /kencovid
 
 ![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20one.png)
 #### in hadoop
-### image two
+![alt text](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20two.png)
 
 ## Step Two: Use pyspark package to extract data from the data lake 
 #### first we begin by starting a SparkSession 
@@ -26,7 +26,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName("csv_extraction").getOrCreate()
 ```
-### image three  
+[### image three ](https://github.com/kyme19/PySpark-COVID-19-Hospital-Capacity-Prediction/blob/main/imgs/image%20three.png)
 
 ### Step Three: Reading the CSV file from the HDFS into a DataFrame
 
