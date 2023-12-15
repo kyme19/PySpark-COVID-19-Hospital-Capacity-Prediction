@@ -1,0 +1,81 @@
+County,Facility Name,Regular Isolation Beds Available,Regular Isolation Beds Recommended,Available ICU/Critical Care beds for Isolation,Recommended ICU/Critical Care beds for Isolation,Ventilators Available for isolation,Ventilators Recommended for isolation
+Elgeyo Marakwet,Iten County Referral Hospital,20,20,0,2,,2
+Nandi,Nandi Hills County Hospital,35,20,0,2,,1
+TransNzoia,Mt. Elgon County Hospital,40,20,0,2,,2
+Turkana,Lodwar County Referral Hospital,12,20,0,2,,2
+Turkana,Lopiding Sub-County Hospital,0,20,0,2,,
+Uasin Gishu,MTRH Eldoret,7,100,0,20,,6
+Uasin Gishu,Kamalel Sub-County Hospital,30,20,0,2,,2
+West Pokot,Kapenguria Referral Hospital,35,20,0,2,,2
+West Pokot,Ortum Mission Hospital,50,20,0,2,,2
+Nakuru,Nakuru Level 5 Hosp,28,50,1,4,,3
+Nakuru,Naivasha County Refferal Hospital,8,20,0,2,,2
+Samburu,Samburu County Refferal Hospital,10,20,0,2,,2
+Samburu,Baragoi Sub-County Hospital,0,20,0,2,,
+Laikipia,Nanyuki Teaching and Refferal Hospital,22,20,0,2,,2
+Laikipia,Nyahururu County Hospital,11,20,0,2,,
+Kericho,Kericho County Refferal Hospital,12,20,0,2,,2
+Kericho,Kapkatet Subcounty Hospital,24,10,0,2,,
+Narok,Narok County Refferal Hospital,11,20,0,2,,2
+Bomet,Longisa County Refferal Hospital,20,20,0,2,,2
+Bomet,Koiwa Sub- County Hospital.,24,10,0,2,,2
+Kisumu,Jaramogi Oginga Odinga Teaching and Referral Hospital,15,50,0,,,4
+Kisumu,Kisumu County Referral Hospital,5,20,0,2,,2
+Homa Bay,Malela Health Centre,16,20,0,2,,2
+Nyamira,Nyamira County Referral Hospital,17,20,0,2,,2
+Nyamira,Bombangi Dispensary,5,10,0,0,,
+Siaya,Bondo Sub-County Hospital,8,20,0,2,,2
+Migori,Macalder Sub-County Hospital,30,20,0,2,,2
+Kisii,Kisii Teaching & Referral Hospital,40,50,0,4,,3
+Kisii,Kenyerere Health Centre,10,20,0,2,,
+Nairobi,Kenyatta University Teaching Referral & Research Hospital,456,516,20,25,24,
+Nairobi,Kenyatta National Hospital Infectious Diseases Unit (Main Hospital),6,100,1,10,1,2
+Nairobi,Mbagathi Infectious Diseases Hospital,120,100,4,12,4,6
+Nyeri,Mt. Kenya Sub County Hospital,18,20,2,4,,
+Kirinyaga,Kerugoya County Referral Hosp,14,20,0,2,,2
+Nyandarua,J.M. Kariuki Memorial,7,20,0,2,,2
+Nyandarua,Engineer County Hospital,6,20,0,2,,
+Kiambu,Kiambu Level 5 Hospital,14,50,0,4,,2
+Kiambu,Thika Level 5 Hospital,10,50,0,4,,3
+Kiambu,Gatundu County Referral Hospital,10,20,0,2,,2
+Muranga,Muranga Level 4 Hospital,10,20,0,2,,2
+Muranga,Muriranjas SC Hospital,4,20,0,2,,2
+Meru,St Theresa Mission Kiirua,8,10,0,,,3
+Meru,Meru Teaching & Referral Hospital-County has designated Mboroga Health Centre as county isolation facility under Meru level 5.,,,,,2,2
+Tharaka Nithi,Chuka Hospital,12,20,0,2,,3
+Tharaka Nithi,PCEA Chogoria Mission Hospital,12,20,0,2,,3
+Embu,Embu Level 5 Hospital,8,50,0,4,,2
+Embu,Siakago Level 4 Hospital,8,20,0,2,,3
+Kitui,Kauwi Sub-County Hospital,25,20,0,2,,3
+Kitui,Mwingi Level 4 Hospital,8,20,0,2,,3
+Machakos,Machakos Level 5 Hospital,10,50,0,4,,3
+Machakos,Kangundo Level 4 Hospital,14,20,0,2,,3
+Makueni,Makueni County Refferal Hospital,11,20,0,2,,3
+Makueni,Makindu Isolation facility,100,20,0,2,,
+Kajiado,Kajiado County Refferal Hospital,16,20,0,2,,3
+Kajiado,Kitengela Sub County Hospital,12,20,0,2,,3
+Mombasa,Mombasa County Teaching Referral Hospital,19,50,0,4,,3
+Kwale,Msambweni Sub County Hospital,4,20,0,2,,2
+Kwale,Kwale SCH,2,20,0,2,,
+Taita Taveta,Moi County Referral Hospital,20,20,0,2,,1
+Taita Taveta,Taveta Level 4 Hospital,20,20,0,2,,
+Lamu,Lamu County Hospital (King Fahd),9,20,0,2,,1
+Lamu,Mpeketoni Sub County Hospital,3,20,0,2,,
+Kilifi,Jibana Sub County Hospital,40,20,0,2,,1
+Kilifi,Mbudzi Health Centre,40,20,0,2,,
+Tana River,Hola Hospital,15,20,0,2,,1
+Tana River,Bura Hospital,15,20,0,2,,
+Kakamega,Kakamega County Teaching & Referral Hospital (KCTRH),4,50,0,4,,3
+Kakamega,Masinde Muliro University of Science & Technology,10,20,0,2,,3
+Vihiga,Vihiga County Referral Hospital,4,20,0,2,,3
+Vihiga,Emuhaya Sub County Hospital,2,20,0,2,,3
+Bungoma,Webuye Sub-County Hospital,10,20,0,2,,3
+Busia,Alupe Sub-County Hospital,100,20,0,2,,3
+Isiolo,Isiolo County Referral Hospital,6,20,0,2,,2
+Isiolo,Merti Sub County Hospital,20,20,0,2,,
+Marsabit,Marsabit County Referral Hospital,20,20,0,2,,3
+Marsabit,Kalacha Sub County Hospital,0,20,0,2,,
+Garissa,Garissa County Referral Hospital,10,50,0,4,,3
+Wajir,Wajir County Referral Hospital,6,20,0,2,,3
+Mandera,Mandera County Referral Hospital,22,20,6,2,,3
+Mandera,Elwak Hospital,28,20,4,2,,
